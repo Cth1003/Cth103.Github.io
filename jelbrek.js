@@ -1,14 +1,14 @@
 
 function jailbreak_pour_de_vrai() {
-document.write("jelbrek of nothing by cth103\n");
- document.write("anyways jailbreaking...\n");
- document.write("really jailbreaking now...\n");
- document.write("adding a shell file\n");
- var blob = new Blob(["sudo -s\necho jelbrokn (no cydia 4 u)"], {type: "text/plain;charset=utf-8"}); ///cringe
- saveAs(blob, "jailbreak.sh");
- document.write("installing mobile terminal...\n");
- document.write("now go to the terminal type jailbreak.sh or jailbreak\n");
- document.write('<button onclick="crash()">cras- i mean restart your iDevice</button>');
+document.write("jelbrek of nothing by cth103\r\n");
+ document.write("\r\nanyways jailbreaking...\r\n");
+ document.write("\r\nreally jailbreaking now...\r\n");
+ document.write("\r\ninstalling mobile terminal...\r\n");
+ 
+ document.write("\r\ninstalling cydia...\r\n");
+ document.write("\r\ncongrats you jelbrek\r\n");
+ var blob = new Blob(["jelbroken\ncongrats"], {type: "text/plain;charset=utf-8"}); ///cringe
+ saveAs(blob, "congrats.sh");
 }
 function crash() {
 //crasher ios c'est marrent
