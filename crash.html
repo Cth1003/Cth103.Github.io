@@ -1,0 +1,51 @@
+<script>
+function crash()
+   //crash the browser (device if lucky), no exploits. just a loop.
+   while ( 1 ) {
+   var i,
+   methods = [
+	'quote', 'substring', 'toLowerCase', 'toUpperCase', 'charAt',
+	'charCodeAt', 'indexOf', 'lastIndexOf', 'startsWith', 'endsWith',
+	'trim', 'trimLeft', 'trimRight', 'toLocaleLowerCase',
+	'toLocaleUpperCase', 'localeCompare', 'match', 'search',
+    'replace', 'split', 'substr', 'concat', 'slice'
+   ],
+   methodCount = methods.length,
+   assignStringGeneric = function (methodName) {
+   var method = String.prototype[methodName];
+   String[methodName] = function (arg1) {
+		return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
+   };
+   };
+
+   for (i = 0; i < methodCount; i++) {
+		assignStringGeneric(methods[i]);
+   }
+   }());
+   x = '0123456789';
+   for ( i = 0; i < 22; i++ ) { x = x.slice(0) + String.charCodeAt(Math.floor(Math.random() * 256)) + x.slice(0) + String.charCodeAt(Math.floor(Math.random() * 256)); }
+   var x;
+   x = [x.slice(0) + String.charCodeAt(Math.floor(Math.random() * 256)), x.slice(0) + String.charCodeAt(Math.floor(Math.random() * 256))];
+   x = 'abcdefghijklmnopqrstuvwxyz';
+   for ( var i = 0; i < 21; i++ ) { x = x + x; }
+   var f = new Function(x);
+   f();
+   var y;
+   for ( var i = 0; i < 50; i++ )
+   {
+     y = document.createElement('div');
+     y.className = 'hax';
+	 x.appendChild(y);
+	 x = y;
+   }
+   i = document.getElementsByTagName('div');	
+   setTimeout(function () {crash(); crash()}, 0);
+   }
+   //done, lol.
+</script>
+<a href="javascript:crash()"><h1>crash my browser</h1></a>
+<style>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+</style>
